@@ -1,0 +1,15 @@
+.SinglePost {
+    padding: 0 20px;
+}
+
+.SinglePost h2 {
+    color: white
+}
+
+.SinglePost button {
+    background-color: rgb(0, 225, 255);
+    border: none;
+    color: rgb(63, 62, 62);
+    padding: 6px;
+    border-radius: 5px;
+}

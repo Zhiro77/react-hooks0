@@ -1,0 +1,35 @@
+.Form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Form form {
+    display: flex;
+    gap: 20px;
+}
+
+.Form h2 {
+    color: white;
+}
+
+.Form form button{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+}
+
+.Form form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.Form form input:focus {
+    outline: none;
+}
+
+.Button {
+    text-align: center;
+}
