@@ -8,29 +8,36 @@ const initialState = {
     count: 0
 }
 
+const PLUS = "plus";
+const MINUS = "minus";
+const ITMES = "times";
+const DIVIDE = "divide";
+const ZERO = "zero"
+
+
 const reducer = (state: { count: number }, action: { type: string; payload: number }) => {
     switch (action.type) {
-        case "plus":
+        case PLUS:
             return {
                 ...state,
                 count: state.count + action.payload
             }
-        case "minus":
+        case MINUS:
             return {
                 ...state,
                 count: state.count - action.payload
             }
-        case "times":
+        case ITMES:
             return {
                 ...state,
                 count: state.count * action.payload
             }
-        case "divide":
+        case DIVIDE:
             return {
                 ...state,
                 count: state.count / action.payload
             }  
-        case "zero":
+        case ZERO:
             return {
                 ...state,
                 count: 0
@@ -49,11 +56,11 @@ const Counter = () => {
             <div className="Counter">
                 <h1>{state.count}</h1>
                 <div className="buttonContainer">
-                    <button onClick={() => dispatch({type: 'plus', payload: 2})}>+ 2</button>
-                    <button onClick={() => dispatch({type: 'minus', payload: 45})}>- 45</button>
-                    <button onClick={() => dispatch({type: 'times', payload: 7})}>* 7</button>
-                    <button onClick={() => dispatch({type: 'divide', payload: 3})}>/ 3</button>
-                    <button onClick={() => dispatch({type: 'zero', payload: 0})}>0</button>
+                    <button onClick={() => dispatch({type: PLUS, payload: 2})}>+ 2</button>
+                    <button onClick={() => dispatch({type: MINUS, payload: 45})}>- 45</button>
+                    <button onClick={() => dispatch({type: ITMES, payload: 7})}>* 7</button>
+                    <button onClick={() => dispatch({type: DIVIDE, payload: 3})}>/ 3</button>
+                    <button onClick={() => dispatch({type: ZERO, payload: 0})}>0</button>
                 </div>
             </div>
             <Popup/>
